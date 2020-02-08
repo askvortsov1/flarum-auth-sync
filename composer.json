@@ -1,0 +1,36 @@
+{
+    "name": "askvortsov/flarum-auth-sync",
+    "keywords": [
+        "flarum"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^0.1.0-beta.8"
+    },
+    "authors": [
+        {
+            "name": "Alexander Skvortsov",
+            "email": "sasha.skvortsov109@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Askvortsov\\FlarumAuthSync\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Flarum Auth Sync",
+            "icon": {
+                "name": "",
+                "backgroundColor": "",
+                "color": ""
+            }
+        },
+        "flagrow": {
+            "discuss": ""
+        }
+    }
+}
