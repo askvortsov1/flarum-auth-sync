@@ -1,5 +1,6 @@
 {
     "name": "askvortsov/flarum-auth-sync",
+    "description": "Manage Sync from External Identity Providers",
     "keywords": [
         "flarum"
     ],
