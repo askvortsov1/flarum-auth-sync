@@ -6,7 +6,8 @@
     "type": "flarum-extension",
     "license": "MIT",
     "require": {
-        "flarum/core": "^0.1.0-beta.8"
+        "flarum/core": "^0.1.0-beta.8",
+        "fof/components": ">=0.1.0"
     },
     "authors": [
         {
@@ -24,9 +25,9 @@
         "flarum-extension": {
             "title": "Flarum Auth Sync",
             "icon": {
-                "name": "",
-                "backgroundColor": "",
-                "color": ""
+                "name": "fas fa-sync",
+                "backgroundColor": "#6932D1",
+                "color": "#fff"
             }
         },
         "flagrow": {

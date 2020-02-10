@@ -12,11 +12,19 @@
 namespace Askvortsov\FlarumAuthSync;
 
 use Flarum\Extend;
-use Askvortsov\FlarumSAML\Listener;
+use FoF\Components\Extend\AddFofComponents;
+use Askvortsov\FlarumAuthSync\Listener;
 use Illuminate\Contracts\Events\Dispatcher;
 
 return [
+    new AddFofComponents(),
+
+    (new Extend\Frontend('admin'))
+        ->js(__DIR__ . '/js/dist/admin.js'),
+
     function (Dispatcher $events) {
         $events->subscribe(Listener\UserUpdatedListener::class);
     },
+
+    new Extend\Locales(__DIR__ . '/resources/locale')
 ];
