@@ -3,22 +3,21 @@
 namespace Askvortsov\FlarumAuthSync\Listener;
 
 use Askvortsov\FlarumAuthSync\Models\AuthSyncEvent;
-use Illuminate\Contracts\Container\Container;
+use Flarum\Api\Event\Serializing;
 use Flarum\Extension\ExtensionManager;
 use Flarum\Group\Group;
 use Flarum\Http\UrlGenerator;
-use Flarum\Settings\SettingsRepositoryInterface;
 use Flarum\User\AvatarUploader;
-use Flarum\User\Event\Registered;
 use Flarum\User\User;
-use Flarum\User\Event\LoggedIn;
-use Flarum\Api\Event\Serializing;
 use Flarum\User\Event\GroupsChanged;
-use FoF\Masquerade\Api\Controllers\UserConfigureController;
+use Flarum\User\Event\LoggedIn;
+use Flarum\User\Event\Registered;
+use Flarum\Settings\SettingsRepositoryInterface;
 use FoF\Masquerade\Field;
+use FoF\Masquerade\Api\Controllers\UserConfigureController;
+use Illuminate\Contracts\Container\Container;
 use Illuminate\Contracts\Events\Dispatcher;
 use Intervention\Image\ImageManager;
-use Zend\Diactoros\CallbackStream;
 use Zend\Diactoros\ServerRequest;
 
 class UserUpdatedListener
