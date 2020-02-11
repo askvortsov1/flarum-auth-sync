@@ -6,7 +6,6 @@ use Askvortsov\FlarumAuthSync\Models\AuthSyncEvent;
 use Flarum\Api\Event\Serializing;
 use Flarum\Extension\ExtensionManager;
 use Flarum\Group\Group;
-use Flarum\Http\UrlGenerator;
 use Flarum\User\AvatarUploader;
 use Flarum\User\User;
 use Flarum\User\Event\GroupsChanged;
@@ -25,16 +24,13 @@ class UserUpdatedListener
     protected $avatarUploader;
     protected $extensions;
     protected $settings;
-    protected $container;
-    protected $url;
 
-    public function __construct(Container $container, AvatarUploader $avatarUploader, ExtensionManager $extensions, SettingsRepositoryInterface $settings, UrlGenerator $url)
+    public function __construct(Container $container, AvatarUploader $avatarUploader, ExtensionManager $extensions, SettingsRepositoryInterface $settings)
     {
         $this->avatarUploader = $avatarUploader;
         $this->extensions = $extensions;
         $this->settings = $settings;
         $this->container = $container;
-        $this->url = $url;
     }
 
     public function subscribe(Dispatcher $events)
