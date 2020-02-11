@@ -77,8 +77,8 @@ class UserUpdatedListener
             if (isset($attributes['groups']) && $this->settings->get('askvortsov-auth-sync.sync_groups', False)) {
                 $newGroupIds = [];
                 foreach($attributes['groups'] as $group) {
-                    if (is_int($group) && Group::where('id', $group)->exists()) {
-                        $newGroupIds[] = $group;
+                    if (filter_var($group, FILTER_VALIDATE_INT) && Group::where('id', intval($group))->exists()) {
+                        $newGroupIds[] = intval($group);
                     }
                 }
 
