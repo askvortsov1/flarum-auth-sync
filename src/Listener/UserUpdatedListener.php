@@ -17,7 +17,7 @@ use FoF\Masquerade\Api\Controllers\UserConfigureController;
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Contracts\Events\Dispatcher;
 use Intervention\Image\ImageManager;
-use Zend\Diactoros\ServerRequest;
+use Laminas\Diactoros\ServerRequest;
 
 class UserUpdatedListener
 {
