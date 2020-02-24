@@ -52,7 +52,7 @@ class UserUpdatedListener
 
     public function syncWorkAround(Serializing $event)
     {
-        if (!isset($event->model['on_bio']) && !isset($event->model['validation'])) {
+        if (is_array($event->model) && !isset($event->model['on_bio']) && !isset($event->model['validation'])) {
             $user = $event->actor;
             if ($user != null) {
                 return $this->sync($user);
