@@ -59,7 +59,9 @@ app.initializers.add('askvortsov/auth-sync', () => {
         );
     });
 
-    $(function () {
+
+    extend(UserCard.prototype, 'config', function (isInitialized) {
+        if (isInitialized) return;
         if (app.forum.attribute('stopBioChange') && $('.UserBio').hasClass('editable')) {
             if ($('.UserBio-content').find('.UserBio-placeholder').length !== 0) {
                 var styleTag = $('<style>.item-bio { display: none !important; }</style>')

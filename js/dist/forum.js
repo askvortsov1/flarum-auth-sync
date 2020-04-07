@@ -174,7 +174,9 @@ app.initializers.add('askvortsov/auth-sync', function () {
       className: "UserCard-info"
     }, flarum_helpers_listItems__WEBPACK_IMPORTED_MODULE_7___default()(this.infoItems().toArray()))))));
   });
-  $(function () {
+  Object(flarum_extend__WEBPACK_IMPORTED_MODULE_0__["extend"])(flarum_components_UserCard__WEBPACK_IMPORTED_MODULE_1___default.a.prototype, 'config', function (isInitialized) {
+    if (isInitialized) return;
+
     if (app.forum.attribute('stopBioChange') && $('.UserBio').hasClass('editable')) {
       if ($('.UserBio-content').find('.UserBio-placeholder').length !== 0) {
         var styleTag = $('<style>.item-bio { display: none !important; }</style>');
