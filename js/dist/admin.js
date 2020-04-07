@@ -126,12 +126,18 @@ app.initializers.add('askvortsov/auth-sync', function () {
         key: "askvortsov-auth-sync.sync_avatar",
         required: true
       }, app.translator.trans('askvortsov-auth-sync.admin.labels.sync_avatar')), m(BooleanItem, {
+        key: "askvortsov-auth-sync.stop_avatar_change",
+        required: true
+      }, app.translator.trans('askvortsov-auth-sync.admin.labels.stop_avatar_change')), m(BooleanItem, {
         key: "askvortsov-auth-sync.sync_groups",
         required: true
       }, app.translator.trans('askvortsov-auth-sync.admin.labels.sync_groups')), m(BooleanItem, {
         key: "askvortsov-auth-sync.sync_bio",
         required: true
       }, app.translator.trans('askvortsov-auth-sync.admin.labels.sync_bio')), m(BooleanItem, {
+        key: "askvortsov-auth-sync.stop_bio_change",
+        required: true
+      }, app.translator.trans('askvortsov-auth-sync.admin.labels.stop_bio_change')), m(BooleanItem, {
         key: "askvortsov-auth-sync.sync_masquerade",
         required: true
       }, app.translator.trans('askvortsov-auth-sync.admin.labels.sync_masquerade'))]
