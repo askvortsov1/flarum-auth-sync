@@ -175,7 +175,7 @@ app.initializers.add('askvortsov/auth-sync', function () {
     }, flarum_helpers_listItems__WEBPACK_IMPORTED_MODULE_7___default()(this.infoItems().toArray()))))));
   });
   $(function () {
-    if (app.forum.attribute('stopBioChange')) {
+    if (app.forum.attribute('stopBioChange') && $('.UserBio').hasClass('editable')) {
       if ($('.UserBio-content').find('.UserBio-placeholder').length !== 0) {
         var styleTag = $('<style>.item-bio { display: none !important; }</style>');
         $('html > head').append(styleTag);
