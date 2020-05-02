@@ -15,9 +15,9 @@ app.initializers.add('askvortsov/auth-sync', () => {
                     <BooleanItem key="askvortsov-auth-sync.sync_avatar" required>
                         {app.translator.trans('askvortsov-auth-sync.admin.labels.sync_avatar')}
                     </BooleanItem>,
-                    <BooleanItem key="askvortsov-auth-sync.ignored_avatar" required>
+                    <StringItem key="askvortsov-auth-sync.ignored_avatar">
                         {app.translator.trans('askvortsov-auth-sync.admin.labels.ignored_avatar')}
-                    </BooleanItem>,
+                    </StringItem>,
                     <BooleanItem key="askvortsov-auth-sync.stop_avatar_change" required>
                         {app.translator.trans('askvortsov-auth-sync.admin.labels.stop_avatar_change')}
                     </BooleanItem>,

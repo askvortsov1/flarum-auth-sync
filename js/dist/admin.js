@@ -125,9 +125,8 @@ app.initializers.add('askvortsov/auth-sync', function () {
       items: [m(BooleanItem, {
         key: "askvortsov-auth-sync.sync_avatar",
         required: true
-      }, app.translator.trans('askvortsov-auth-sync.admin.labels.sync_avatar')), m(BooleanItem, {
-        key: "askvortsov-auth-sync.ignored_avatar",
-        required: true
+      }, app.translator.trans('askvortsov-auth-sync.admin.labels.sync_avatar')), m(StringItem, {
+        key: "askvortsov-auth-sync.ignored_avatar"
       }, app.translator.trans('askvortsov-auth-sync.admin.labels.ignored_avatar')), m(BooleanItem, {
         key: "askvortsov-auth-sync.stop_avatar_change",
         required: true
