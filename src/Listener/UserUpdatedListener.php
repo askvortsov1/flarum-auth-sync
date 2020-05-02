@@ -65,12 +65,12 @@ class UserUpdatedListener
         foreach ($events as $event) {
             $attributes = json_decode($event->attributes, true);
             // If Avatar present and avatar sync enabled
-            if (isset($attributes['avatar']) && $this->settings->get('askvortsov-auth-sync.sync_avatar', False)) {
+            if (isset($attributes['avatar']) && $this->settings->get('askvortsov-auth-sync.sync_avatar', false) && $attributes['avatar'] != $this->settings->get('askvortsov-auth-sync.ignored_avatar', '')) {
                 $image = (new ImageManager)->make($attributes['avatar']);
                 $this->avatarUploader->upload($user, $image);
             }
             // If group present and group sync enabled
-            if (isset($attributes['groups']) && $this->settings->get('askvortsov-auth-sync.sync_groups', False)) {
+            if (isset($attributes['groups']) && $this->settings->get('askvortsov-auth-sync.sync_groups', false)) {
                 $newGroupIds = [];
                 foreach($attributes['groups'] as $group) {
                     if (filter_var($group, FILTER_VALIDATE_INT) && Group::where('id', intval($group))->exists()) {
