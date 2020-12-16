@@ -6,14 +6,18 @@
     ],
     "type": "flarum-extension",
     "license": "MIT",
+    "support": {
+        "issues": "https://github.com/askvortsov1/flarum-auth-sync/issues",
+        "source": "https://github.com/askvortsov1/flarum-auth-sync",
+        "forum": "https://discuss.flarum.org/d/22759-flarum-auth-sync"
+    },
     "require": {
-        "flarum/core": "^0.1.0-beta.14",
-        "fof/components": "^0.2.0"
+        "flarum/core": "^0.1.0-beta.15"
     },
     "authors": [
         {
             "name": "Alexander Skvortsov",
-            "email": "askvortsov@youthneuro.org",
+            "email": "askvortsov@yflarum.org",
             "role": "Developer"
         }
     ],
@@ -25,14 +29,12 @@
     "extra": {
         "flarum-extension": {
             "title": "Flarum Auth Sync",
+            "category": "authentication",
             "icon": {
                 "name": "fas fa-sync",
                 "backgroundColor": "#6932D1",
                 "color": "#fff"
             }
-        },
-        "flagrow": {
-            "discuss": "https://discuss.flarum.org/d/22759-flarum-auth-sync"
         }
     }
 }
